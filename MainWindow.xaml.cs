@@ -10,15 +10,15 @@ namespace EnaApp
         {
             InitializeComponent();
 
-            // エナの画像ファイルを読み込む（PNG形式、背景透過）
+            // エナの画像ファイルを読み込む(ena.pngという名前でソリューションエクスプローラーに保存してある)
             var image = new BitmapImage(new System.Uri("ena.png", System.UriKind.Relative));
             EnaImage.Source = image;
         }
 
-        // ウィンドウドラッグの処理
+        // ドラッグで動くようにする。
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.ChangedButton == MouseButton.Left)
+            if (e.ChangedButton == MouseButton.Left)//左クリック時の処理
             {
                 DragMove();
             }

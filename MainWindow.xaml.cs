@@ -9,8 +9,8 @@ namespace EnaApp
 {
     public partial class MainWindow : Window
     {
-        private SerifManager serifManager = new SerifManager();
-        private DispatcherTimer serifTimer = new DispatcherTimer();
+        private SerifManager serifManager = new SerifManager();//chatgptより記載
+        private DispatcherTimer serifTimer = new DispatcherTimer();//chatgptより記載
 
 
         public MainWindow()
@@ -23,23 +23,23 @@ namespace EnaApp
         }
 
 
-        private void EnaImage_RightClick(object sender, MouseButtonEventArgs e)
+        private void EnaImage_RightClick(object sender, MouseButtonEventArgs e)//右クリックを定義
         {
             string line = serifManager.GetRandomSerif();
             ShowSerif(line);
         }
 
-        private void ShowSerif(string text)
+        private void ShowSerif(string text)//chatgptより記載
         {
             SerifText.Text = text;
-            SerifText.Visibility = Visibility.Visible;
+            SerifText.Visibility = Visibility.Visible;//SerifTextの表示状態を「見える（Visible）」に設定している。
 
-            serifTimer.Stop();
+            serifTimer.Stop();//もしserifTimer（タイマー）が動いていたら、まず止める処理。
             serifTimer = new DispatcherTimer();
-            serifTimer.Interval = TimeSpan.FromSeconds(3);
+            serifTimer.Interval = TimeSpan.FromSeconds(3);//タイマーを三秒に設定
             serifTimer.Tick += delegate (object s, EventArgs e)
             {
-                SerifText.Visibility = Visibility.Collapsed;
+                SerifText.Visibility = Visibility.Collapsed;//SerifTextの表示状態を「見えなくなる(Collapsed)」に設定している。
                 serifTimer.Stop();
             };
             serifTimer.Start();

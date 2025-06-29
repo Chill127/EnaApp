@@ -14,7 +14,7 @@
         <Image x:Name="EnaImage"
                Source="ena.png"
                Stretch="Uniform"
-               MouseRightButtonDown="EnaImage_RightClick" Margin="-10,0,0,4" />
+               MouseRightButtonDown="EnaImage_RightClick" Margin="-232,-154,-180,-502" />
 
         <!-- セリフテキスト -->
         <TextBlock x:Name="SerifText"

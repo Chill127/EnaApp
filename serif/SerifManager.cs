@@ -34,7 +34,7 @@ namespace EnaApp.Serif
 
         private string GetTimePeriodKey()
         {
-            int hour = DateTime.Now.Hour;//現在時刻「時」をだけを取得。以降で応じた条件分岐。
+            int hour = DateTime.Now.Hour;//現在時刻「時(hour)」をだけを取得。以降で応じた条件分岐。
 
             if (hour >= 6 && hour < 12)
                 return "morning";

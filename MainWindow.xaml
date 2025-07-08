@@ -7,6 +7,7 @@
     AllowsTransparency="True"
     Background="Transparent"
     Topmost="True"
+    KeyDown="Window_KeyDown"
     MouseDown="Window_MouseDown">
 
     <Grid>
@@ -27,5 +28,7 @@
                TextAlignment="Center"
                Visibility="Collapsed"
                TextWrapping="Wrap" />
+
+
     </Grid>
 </Window>
